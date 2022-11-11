@@ -95,7 +95,6 @@ function ImageFinder() {
       {totalImages >= 12 && totalImages < totalPage && (
         <Button loadMore={onLoadMore} />
       )}
-      {/* imagesOnPage >= 12 && imagesOnPage < totalImages && */}
     </section>
   );
 }
