@@ -19,34 +19,3 @@ function ImageGallery({ pictures, modalClick }) {
 }
 
 export default ImageGallery;
-
-// return <ImageGalleryItem picture={pictures} />;
-
-//   <ul>
-//     {pictures.map(({ id, webformatURL, largeImageURL }) => {
-//       return (
-//         <ImageGalleryItem
-//           key={id}
-//           previewURL={webformatURL}
-//           modalURL={largeImageURL}
-//         />
-//       );
-//     })}
-//   </ul>
-// );
-
-// function ImageGallery({ pictures }) {
-//   return (
-//     <ul>
-//       {pictures.map(picture => {
-//         return (
-//           <ImageGalleryItem
-//             key={picture.id}
-//             previewURL={picture.webformatURL}
-//             modalURL={picture.largeImageURL}
-//           />
-//         );
-//       })}
-//     </ul>
-//   );
-// }
