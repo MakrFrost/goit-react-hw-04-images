@@ -26,6 +26,7 @@ function ImageFinder() {
   const [largeImageURL, setLargeImageURL] = useState(null);
   const [totalPage, setTotalPage] = useState(1);
   const totalImages = findPictures.length;
+  console.log(loadMore);
 
   useEffect(() => {
     if (toFind.trim() === '') {
