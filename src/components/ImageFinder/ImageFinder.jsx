@@ -25,6 +25,7 @@ function ImageFinder() {
   const [loadMore, setLoadMore] = useState(false);
   const [largeImageURL, setLargeImageURL] = useState(null);
   const [totalPage, setTotalPage] = useState(1);
+  const totalImages = findPictures.length;
 
   useEffect(() => {
     if (toFind.trim() === '') {
@@ -42,6 +43,7 @@ function ImageFinder() {
       console.log(data);
 
       const totalPage = Math.ceil(data.totalHits / 12);
+
       setFindPictures(prevState => [...prevState, ...data.hits]);
       setTotalPage(totalPage);
       console.log(totalPage);
@@ -90,7 +92,10 @@ function ImageFinder() {
       {modalShow && (
         <Modal modalClick={modalImageClick} largeImageURL={largeImageURL} />
       )}
-      {page !== totalPage && <Button loadMore={onLoadMore} />}
+      {totalImages >= 12 && totalImages < totalPage && (
+        <Button loadMore={onLoadMore} />
+      )}
+      {/* imagesOnPage >= 12 && imagesOnPage < totalImages && */}
     </section>
   );
 }
